@@ -1,0 +1,64 @@
+.countdownHolder {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 5px 0;
+    display: inline-block; /* so it stays tight around the digits */
+  }
+  
+  /* Each pair of digits (Years, Months, etc.) */
+  .countPair {
+    display: inline-block;
+    margin: 0 0.2em;
+  }
+  
+  /* Digit container */
+  .position {
+    display: inline-block;
+    position: relative;
+    width: 2em;
+    height: 2em;
+    margin: 0 0.1em;
+    overflow: hidden;
+  }
+  
+  /* The digit itself */
+  .digit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.8em;
+    text-align: center;
+    color: #fff;
+    background: red; /* Boxes are red */
+    border-radius: 0.2em;
+    padding: 0.1em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    font-size: 1em;
+    line-height: 1em;
+  }
+  
+  .static {
+    opacity: 1;
+  }
+  
+  /* Colon separators between pairs */
+  .countDiv {
+    display: inline-block;
+    width: 0.4em;
+    height: 2em;
+    position: relative;
+    margin: 0 0.2em;
+  }
+  
+  .countDiv:before,
+  .countDiv:after {
+    content: ':';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #007bff;
+    font-size: 1em;
+  }
+  

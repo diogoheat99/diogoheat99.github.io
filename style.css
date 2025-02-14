@@ -1,47 +1,156 @@
+/* Slideshow container */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  background-image: url("images\background.jpg"); /* Make sure the image is in the correct location */
+  background-size: cover; /* Covers the entire page */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Keeps the image fixed when scrolling */
+  background-repeat: no-repeat; /* Prevents tiling */
+}
+
+
+.slideshow-container {
+  max-width: 50%; /* Adjusted for better layout */
+  position: relative;
+  margin: 160px auto 20px;
+}
+
+/* Hide all slides by default */
+.mySlides {
+  display: none;
+  text-align: center;
+}
+
+/* Image styling (Fixed size 1080x1920) */
+.mySlides img {
+  width: 100%;  /* Ensure it takes the full space */
+  max-width: 508px;
+  height: 592px;
+  object-fit: cover; /* Ensures the image fills the area properly */
+  border-radius: 10px;
+}
+
+/* Description text */
+.text {
+  color: white;
+  font-size: 1em;
+  padding: 8px;
+  width: 80%;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+}
+
+/* Navigation buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Dots (Indicators) */
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .slideshow-container {
+    max-width: 90%;
   }
-  
-  .container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+
+  .mySlides img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
-  
-  h1 {
-    margin-bottom: 20px;
+
+  .text {
+    font-size: 0.9em;
   }
-  
-  input {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 80%;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  .error {
-    color: red;
-    margin-top: 10px;
-  }
+}
+/* Custom Text Above Images */
+#custom-text {
+  text-align: center;
+  margin: 40px auto 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  font-family: "Times New Roman", Times, serif;
+  max-width: 80%;
+}
+/* Fixed pink bar at the top */
+#countdown-container {
+  background-color: pink; /* Pink background */
+  text-align: center; /* Center all content */
+  padding: 20px 0; /* Space above and below */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed; /* Keeps it at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Styling for the clock title */
+#clock-title {
+  font-size: 1.8em;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Centering countdown digits */
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Centering the subtitle labels */
+#clock-subtitle {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  width: 300%; /* Adjust width to match countdown */
+  max-width: 600px; /* Ensures it doesn't get too wide */
+}
+
+

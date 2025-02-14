@@ -4,13 +4,141 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Main Website</title>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="countdown.css">
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="jquery.countup.js"></script>
+  <script src="script.js"></script>
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome to the Main Website</h1>
-    <p>You have successfully entered the correct password!</p>
-    <p>This is the real content of your website.</p>
+
+  <!-- Fixed pink bar at the top -->
+  <div id="countdown-container">
+    <h2 id="clock-title">O nosso love clock babyyy!!</h2>
+    <div id="countdown" class="countdownHolder"></div>
+    <div id="clock-subtitle">
+      <span>Years</span> <span>Months</span> <span>Days</span>
+      <span>Hours</span> <span>Minutes</span> <span>Seconds</span>
+    </div>
   </div>
+
+  <div id="custom-text">
+    <h3>My babyy I love you so much, will you be my valentine?? Queria ter tempo para meter isto melhor
+      mas olha os nossos momentos lindos meu amor, no fundo isto é só mais um dia a celebrar o nosso amor, espero que 
+      adores estes momentos e mal posso esperar para adicionar mais fotos e momentos do nosso futuro lindo juntos.
+    Amo te muito, o teu Diogo para sempre.</h3>
+  </div>
+
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+    <!-- 21 Images with Descriptions -->
+    <div class="mySlides fade">
+      <img src="images\image1.jpg" alt="Image 1">
+      <div class="text"></div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images\image2.jpg" alt="Image 2">
+      <div class="text"></div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images\image3.jpg" alt="Image 3">
+      <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images\image4.jpg" alt="Image 3">
+      <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images\image5.jpg" alt="Image 3">
+      <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images\image6.jpg" alt="Image 3">
+      <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images\image7.jpg" alt="Image 3">
+      <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images\image8.jpg" alt="Image 3">
+      <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images\image9.jpg" alt="Image 3">
+      <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images\image10.jpg" alt="Image 3">
+      <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images\image11.jpg" alt="Image 3">
+      <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images\image12.jpg" alt="Image 3">
+      <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images\image13.jpg" alt="Image 3">
+      <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images\image14.jpg" alt="Image 3">
+      <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images\image15.jpg" alt="Image 3">
+      <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images\image16.jpg" alt="Image 3">
+      <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images\image17.jpg" alt="Image 3">
+      <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images\image18.jpg" alt="Image 3">
+      <div class="text"></div>
+    </div>~
+    <div class="mySlides fade">
+      <img src="images\image19.jpg" alt="Image 3">
+      <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images\image20.jpg" alt="Image 3">
+      <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images\image21.jpg" alt="Image 21">
+      <div class="text"></div>
+    </div>
+
+    <!-- Navigation buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <br>
+
+  <!-- Dots (Indicators) -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <!-- Add up to 21 dots -->
+    <span class="dot" onclick="currentSlide(21)"></span>
+  </div>
+
 </body>
+<script src="script.js"></script>
 </html>
